@@ -67,6 +67,9 @@ flutter:
   assets:
    - assets/images/boom.png
    - assets/images/eye_monster.png
+   - assets/images/bomb_ptero.png
+   - assets/images/run_turna.png
+   - assets/images/death.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

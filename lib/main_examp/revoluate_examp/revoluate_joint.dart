@@ -11,6 +11,7 @@ import 'package:game_example/main_examp/revoluate_examp/uitls/boundaries.dart';
 import 'package:game_example/main_examp/revoluate_examp/uitls/rectangle.dart';
 import 'package:game_example/main_examp/revoluate_examp/zoom_slider.dart';
 
+import '../sprite_example/animated_components/animated_body.dart';
 import 'body_components/draggable_body.dart';
 
 class RevoluteJointExample<T extends FlameGame> extends Forge2DGame with TapDetector, HasDraggables {
@@ -44,7 +45,7 @@ class RevoluteJointExample<T extends FlameGame> extends Forge2DGame with TapDete
     add(RectangleRamp(center));
    // add(SquareCircleRotate(center));
   //  overlays.add(pauseOverlayIdentifier);
-    List.generate(1, (i) {
+    List.generate(0, (i) {
       final randomVector = (Vector2.random() - Vector2.all(-0.5)).normalized();
       add(Ball(center, radius: 1.4));
     });
@@ -58,6 +59,7 @@ class RevoluteJointExample<T extends FlameGame> extends Forge2DGame with TapDete
   @override
   void onTapDown(TapDownInfo details) {
     super.onTapDown(details);
+    add(Mage(camera.gameSize/2, size: Vector2(40, 40)));
     final tapPosition = details.eventPosition.game;
     //final random = Random(); random.nextDouble;
 
